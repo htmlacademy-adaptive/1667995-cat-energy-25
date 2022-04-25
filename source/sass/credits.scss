@@ -1,7 +1,18 @@
 .credits {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 22px 0;
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.credits:hover .credits__organization,
+.credits:hover .credits__logo svg path {
+  fill: var(--basic_green);
+  color: var(--basic_green);
 }
 
 @media (min-width: $tablet-width) {

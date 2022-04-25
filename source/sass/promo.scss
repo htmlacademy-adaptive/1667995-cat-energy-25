@@ -4,6 +4,7 @@
 
 .promo__section-container {
   @include container;
+  padding-top: 27px;
   background-image: url("../../img/promo-background.jpg");
   background-repeat: no-repeat;
   background-size: contain;
@@ -46,11 +47,13 @@
 
   .promo__heading {
     margin-bottom: 42px;
+    padding-top: 42px;
     padding-left: 90px;
     color: #000000;
     text-align: left;
     font-size: 60px;
     line-height: 60px;
+    // если установить максимальную ширину для заголовка, то под неё почему-то сужается весь контейнер
   }
 
   .promo__slogan {
@@ -82,6 +85,7 @@
   .promo {
     width: 100%;
     min-height: 696px;
+    margin-bottom: 82px;
     background-image: url("../../img/promo-background.jpg");
     background-position: right;
     background-repeat: no-repeat;

@@ -1,14 +1,59 @@
 .header {
   width: 100%;
-  border-bottom: 1px solid #d9d9d9;
 }
 
 .header__container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px 20px 20px;
+  padding: 20px;
   border-bottom: 1px solid #d9d9d9;
+}
+
+.header__logo:hover {
+  opacity: 0.8;
+}
+
+.header__logo:active {
+  opacity: 0.6;
+}
+
+.header__toggle {
+  position: relative;
+  padding: 20px;
+  width: 24px;
+  height: 16px;
+  background-color: #ffffff;
+  border: none;
+
+  &--active {
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 17px;
+      height: 1px;
+      background-color: #000000;
+      transform: rotate(45deg);
+    }
+
+    &::before {
+      transform: rotate(-45deg);
+      box-shadow: none;
+    }
+  }
+
+  &--inactive {
+    &::after {
+      content: "";
+      position: absolute;
+      transform: translateY(-7px);
+      width: 24px;
+      height: 1.5px;
+      background-color: #000000;
+      box-shadow: 0 8px 0 0 #000000, 0 16px 0 0 #000000;
+    }
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -17,13 +62,25 @@
 
     display: flex;
     justify-content: space-between;
-    padding: 24px 30px;
-    // почему миксин перебивает эту строчку с паддингами?
+    padding-top: 30px;
+    // не понимаю, почему миксин перебивает новый паддинг
     border: none;
   }
 
   .header__container {
+    padding: 0;
     border: none;
+  }
+
+  .header__logo {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+  }
+
+  .header__logo-pic {
+    display: inline-block;
+    margin-right: 12px;
   }
 
   .header__toggle {
