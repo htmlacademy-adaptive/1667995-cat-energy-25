@@ -6,7 +6,7 @@
 .products-list__item {
   padding-top: 20px;
   padding-bottom: 25px;
-  border-bottom: 1px solid #ebebeb;
+  border-bottom: 1px solid var(--basic-special_grey-2);
 }
 
 @media (min-width: $tablet-width) {

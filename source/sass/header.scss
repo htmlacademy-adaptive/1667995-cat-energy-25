@@ -18,6 +18,10 @@
   opacity: 0.6;
 }
 
+.header__logo-pic {
+  display: inline-block;
+}
+
 .header__toggle {
   position: relative;
   padding: 20px;
@@ -46,12 +50,13 @@
   &--inactive {
     &::after {
       content: "";
+      right: calc(50% + 12px);
+      transform: translate(100%);
       position: absolute;
-      transform: translateY(-7px);
       width: 24px;
       height: 1.5px;
       background-color: #000000;
-      box-shadow: 0 8px 0 0 #000000, 0 16px 0 0 #000000;
+      box-shadow: 0 -8px 0 0 #000000, 0 8px 0 0 #000000;
     }
   }
 }
@@ -79,12 +84,16 @@
   }
 
   .header__logo-pic {
-    display: inline-block;
     margin-right: 12px;
   }
 
   .header__toggle {
     display: none;
+  }
+
+  .header__menu {
+      display: flex;
+      flex-wrap: wrap;
   }
 }
 
@@ -94,4 +103,6 @@
     top: 0;
     z-index: 2;
   }
+
+
 }

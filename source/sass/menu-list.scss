@@ -1,8 +1,9 @@
 .menu-list {
+  @include list-style-reset;
+  background-color: #ffffff;
+
   &--open {
-    @include list-style-reset;
     display: block;
-    background-color: #ffffff;
   }
 
   &--closed {
@@ -36,7 +37,7 @@
 }
 
 @media (min-width: $tablet-width) {
-  .menu-list--open {
+  .menu-list {
     display: flex;
     flex-wrap: wrap;
   }
