@@ -1,0 +1,107 @@
+.header {
+  width: 100%;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.header__logo:hover {
+  opacity: 0.8;
+}
+
+.header__logo:active {
+  opacity: 0.6;
+}
+
+.header__logo-pic {
+  display: inline-block;
+}
+
+.header__toggle {
+  position: relative;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  background-color: #ffffff;
+  border: none;
+
+  &--active {
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 17px;
+      height: 1px;
+      background-color: #000000;
+      transform: rotate(45deg);
+    }
+
+    &::before {
+      transform: rotate(-45deg);
+      box-shadow: none;
+    }
+  }
+
+
+  &--inactive {
+    &::after {
+      content: "";
+      right: calc(50% + 12px);
+      transform: translate(100%);
+      position: absolute;
+      width: 24px;
+      height: 1.5px;
+      background-color: #000000;
+      box-shadow: 0 -8px 0 0 #000000, 0 8px 0 0 #000000;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .header {
+    @include container;
+
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+    // не понимаю, почему миксин перебивает новый паддинг
+    border: none;
+  }
+
+  .header__container {
+    padding: 0;
+    border: none;
+  }
+
+  .header__logo {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+  }
+
+  .header__logo-pic {
+    margin-right: 12px;
+  }
+
+  .header__toggle {
+    display: none;
+  }
+
+  .header__menu {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .header {
+    position: absolute;
+    top: 0;
+    z-index: 2;
+  }
+}

@@ -1,0 +1,353 @@
+.form__fieldset {
+  padding: 0;
+  border: none;
+
+  &--info {
+    padding-bottom: 14px;
+    color: var(--special_dark-grey);
+    border-bottom: 1px solid #d9d9d9;
+  }
+
+  &--goal {
+    margin-bottom: 26px;
+    padding: 20px 0;
+    color: var(--special_dark-grey-2);
+    border-bottom: 1px solid #d9d9d9;
+  }
+}
+
+.form__fieldset-container {
+  @include container;
+  display: flex;
+  flex-direction: column;
+
+  &--contacts {
+    margin-bottom: 13px;
+  }
+}
+
+.form__list {
+  @include list-style-reset;
+}
+
+.form__list-item {
+  margin-bottom: 27px;
+}
+
+.form__legend-wrapper {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    right: 0;
+    z-index: -1;
+    width: 100%;
+    height: 2px;
+    background-color: var(--basic_green);
+  }
+}
+
+.form__legend {
+  width: fit-content;
+  margin: 0 20px 35px 0;
+  padding: 0 22px;
+  font-size: 24px;
+  line-height: 26px;
+  text-transform: none;
+  background-color: #ffffff;
+}
+
+.form__field-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 46px;
+  margin-bottom: 13px;
+}
+// не понимаю, почему лейблы не влезают целиком на одну строку с полем ввода
+
+.form__control:hover .form__control-mark--radio {
+  border: 1px solid #bababa;
+}
+
+.form__control {
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+// чекбоксы и состояния
+
+.form__control-mark {
+  margin-right: 20px;
+  padding-right: 25px;
+  border: 1px solid var(--special_grey);
+
+  &--radio {
+    border-radius: 50%;
+  }
+
+  &--checkbox {
+    position: relative;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.form__control-input:checked .form__control-mark--checkbox::before {
+  content: "";
+  position: absolute;
+  transform: translate(4px, 2px);
+  top: 0%;
+  left: 0;
+  width: 18px;
+  height: 14px;
+  padding: 0;
+  background-image: url("../img/checked.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  & svg path {
+    fill: var(--basic_green);
+  }
+}
+
+/*------------------------------------------*/
+
+.form__field {
+  width: 100%;
+  padding: 13px 15px;
+  border: none;
+  box-shadow: inset 0 0 0 1px #e7e7e7;
+  box-sizing: border-box;
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--special_dark-grey);
+  line-height: 20px;
+  text-transform: uppercase;
+
+  &[name="phone"],
+  &[name="email"] {
+    padding-right: 50px;
+  }
+
+  &:hover {
+    box-shadow: inset 0 0 0 1px var(--special_grey);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: inset 0 0 0 2px var(--special_dark-grey);
+
+    & .form__contacts-icon path {
+      fill: var(--basic_green);
+      // не заполняет
+    }
+  }
+
+  &:invalid {
+    box-shadow: inset 0 0 0 2px var(--status_error);
+
+    & .form__contacts-icon path {
+      fill: var(--status_error);
+      // не заполняет
+    }
+  }
+}
+
+.form__contacts-icon {
+  width: 20px;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+
+.form__textarea {
+  min-height: 150px;
+  margin-bottom: 23px;
+  padding: 9px 15px;
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--special_dark-grey);
+  box-shadow: inset 0 0 0 1px var(--special_grey);
+  box-sizing: border-box;
+  border: none;
+}
+
+.form__submit-wrap {
+  @include container;
+  margin-top: 34px;
+  margin-bottom: 32px;
+}
+
+.form__submit {
+  width: 100%;
+  margin-bottom: 21px;
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.form__tip {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: none;
+  text-align: center;
+  color: #000000;
+}
+
+@media (min-width: $tablet-width) {
+  .form__fieldset {
+    border: none;
+
+    &--goal {
+      margin-bottom: 50px;
+    }
+  }
+
+  .form__fieldset-container {
+    &--contacts {
+      margin-bottom: 50px;
+    }
+  }
+
+  .form__legend {
+    margin: 0 20px;
+    margin-bottom: 76px;
+    padding: 0 39px;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .form__list {
+    &--goal {
+      padding: 25px 27px;
+      border: 1px solid #e7e7e7;
+      box-sizing: border-box;
+    }
+
+    &--extra {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .form__field {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .form__control-mark {
+    padding-right: 40px;
+  }
+
+  // .form__control:hover > .form__control-mark::after {
+  //   border-color: #bababa;
+  // }
+
+  .form__textarea {
+    min-height: 174px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .form__submit-wrap {
+    display: flex;
+    align-items: baseline;
+  }
+
+  .form__submit {
+    width: 40%;
+    margin-right: 60px;
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .form__fieldset-wrapper {
+    @include container;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+  }
+
+  .form__fieldset-container {
+    min-width: 566px;
+    padding: 0;
+
+    &--contacts {
+      display: flex;
+      flex-direction: row;
+      padding: 0 30px;
+
+      & .form__field-wrapper {
+        width: 50%;
+      }
+
+      & .form__field {
+        height: 50px;
+      }
+    }
+  }
+
+  .form__fieldset {
+    &--contacts {
+      flex-direction: row;
+    }
+
+    &--goal {
+      padding: 0;
+    }
+  }
+
+  .form__list {
+    &--extra {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      margin-bottom: 47px;
+      padding: 0 30px;
+    }
+  }
+
+  .form__list-item {
+    margin-bottom: 14px;
+  }
+
+  .form__field-wrapper {
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .form__field {
+    height: 52px;
+    margin-right: 80px;
+  }
+
+  .form__submit-wrap {
+    @include container;
+    margin-bottom: 82px;
+  }
+
+  .form__tip {
+    font-size: 16px;
+  }
+
+  .form__contacts-icon {
+    right: 16%;
+  }
+}
