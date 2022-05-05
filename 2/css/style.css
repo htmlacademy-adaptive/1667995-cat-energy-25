@@ -1,3 +1,18 @@
+:root {
+  --basic_green: #68b738;
+  --basic_green-2: #5eaa2f;
+  --basic_grey: #f2f2f2;
+  --basic-special_grey-2: #ebebeb;
+  --special_grey: #cdcdcd;
+  --special_grey-2: #666666;
+  --special_dark-grey: #444444;
+  --special_dark-grey-2: #222222;
+  --status_error: #ff8282;
+  --shadow_normal: 0 1px 3px rgba(0, 0, 0, 0.16);
+  --shadow_hover: 0 2px 4px rgba(0, 0, 0, 0.19);
+  --shadow_pressed: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
 html {
   height: 100%;
 }
@@ -20,10 +35,16 @@ body {
 
 .visually-hidden {
   position: absolute;
-  clip: rect(0 0 0 0);
+  margin: -1px;
+  padding: 0;
   width: 1px;
   height: 1px;
-  margin: -1px;
+  border: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 @media (min-width: 768px) {
@@ -46,21 +67,6 @@ body {
   src: url("../fonts/oswaldmedium.woff2") format("woff2"), url("../fonts/oswaldmedium.woff") format("woff");
   font-display: swap;
 }
-:root {
-  --basic_green: #68b738;
-  --basic_green-2: #5eaa2f;
-  --basic_grey: #f2f2f2;
-  --basic-special_grey-2: #ebebeb;
-  --special_grey: #cdcdcd;
-  --special_grey-2: #666666;
-  --special_dark-grey: #444444;
-  --special_dark-grey-2: #222222;
-  --status_error: #ff8282;
-  --shadow_normal: 0 1px 3px rgba(0, 0, 0, 0.16);
-  --shadow_hover: 0 2px 4px rgba(0, 0, 0, 0.19);
-  --shadow_pressed: 0 3px 5px rgba(0, 0, 0, 0.2);
-}
-
 .button {
   display: block;
   padding: 14px 0;
@@ -127,11 +133,15 @@ body {
   opacity: 0.6;
 }
 
+.header__logo-pic {
+  display: inline-block;
+}
+
 .header__toggle {
   position: relative;
-  padding: 20px;
-  width: 24px;
-  height: 16px;
+  padding: 0;
+  width: 40px;
+  height: 40px;
   background-color: #ffffff;
   border: none;
 }
@@ -149,12 +159,13 @@ body {
 }
 .header__toggle--inactive::after {
   content: "";
+  right: calc(50% + 12px);
+  transform: translate(100%);
   position: absolute;
-  transform: translateY(-7px);
   width: 24px;
   height: 1.5px;
   background-color: #000000;
-  box-shadow: 0 8px 0 0 #000000, 0 16px 0 0 #000000;
+  box-shadow: 0 -8px 0 0 #000000, 0 8px 0 0 #000000;
 }
 
 @media (min-width: 768px) {
@@ -190,13 +201,18 @@ body {
 }
 @media (min-width: 768px) {
   .header__logo-pic {
-    display: inline-block;
     margin-right: 12px;
   }
 }
 @media (min-width: 768px) {
   .header__toggle {
     display: none;
+  }
+}
+@media (min-width: 768px) {
+  .header__menu {
+    display: flex;
+    flex-wrap: wrap;
   }
 }
 @media (min-width: 1280px) {
@@ -206,12 +222,14 @@ body {
     z-index: 2;
   }
 }
-.menu-list--open {
+.menu-list {
   margin: 0;
   padding: 0;
   list-style-type: none;
-  display: block;
   background-color: #ffffff;
+}
+.menu-list--open {
+  display: block;
 }
 .menu-list--closed {
   display: none;
@@ -241,7 +259,7 @@ body {
 }
 
 @media (min-width: 768px) {
-  .menu-list--open {
+  .menu-list {
     display: flex;
     flex-wrap: wrap;
   }
@@ -494,7 +512,9 @@ body {
   }
 }
 .promo {
+  width: 100%;
   margin-bottom: 20px;
+  background-color: rgba(104, 183, 56, 0.85);
 }
 
 .promo__section-container {
@@ -547,6 +567,7 @@ body {
     flex-direction: column;
     padding-top: 20px;
     background-image: none;
+    background-color: #ffffff;
   }
 
   .promo__heading {
@@ -1229,8 +1250,9 @@ body {
 }
 
 .form__field-wrapper {
-  display: flex;
   position: relative;
+  display: flex;
+  align-items: center;
   min-height: 46px;
   margin-bottom: 13px;
 }
@@ -1402,8 +1424,8 @@ body {
     line-height: 30px;
   }
 
-  .form__control:hover > .form__control-mark::after {
-    border-color: #bababa;
+  .form__control-mark {
+    padding-right: 40px;
   }
 
   .form__textarea {
@@ -1579,7 +1601,7 @@ body {
 .products-list__item {
   padding-top: 20px;
   padding-bottom: 25px;
-  border-bottom: 1px solid #ebebeb;
+  border-bottom: 1px solid var(--basic-special_grey-2);
 }
 
 @media (min-width: 768px) {
