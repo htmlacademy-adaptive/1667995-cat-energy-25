@@ -1,0 +1,34 @@
+.footer {
+  width: 100%;
+  background-color: var(--basic_grey);
+}
+
+.footer__container {
+  @include container;
+}
+
+.footer__logo {
+  width: fit-content;
+  padding: 39px 0 32px 0;
+  margin: 0 auto;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .footer__container {
+    display: flex;
+    padding: 55px 30px;
+  }
+
+  .footer__logo {
+    margin: 0;
+    padding: 0;
+  }
+}

@@ -1,0 +1,17 @@
+@mixin container {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 30px;
+  }
+}
+
+@mixin list-style-reset {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
