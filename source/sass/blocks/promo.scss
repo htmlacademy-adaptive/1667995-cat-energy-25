@@ -107,13 +107,14 @@
     width: 100%;
     min-height: 696px;
     margin-bottom: 82px;
-    background-image: url("../../img/index-background.jpg");
+    background-color: #ffffff;
+    background-image: url("../../img/promo-background-desktop.jpg");
     background-position: right;
     background-repeat: no-repeat;
     background-size: contain;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../../img/index-background@2x.jpg");
+      background-image: url("../../img/promo-background-desktop@2x.jpg");
     }
   }
 
