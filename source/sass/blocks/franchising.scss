@@ -69,7 +69,6 @@
   }
 
   .franchising__container {
-    @include container;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -77,7 +76,6 @@
     z-index: 2;
     width: 565px;
     padding: 56px 80px;
-    // здесь тоже миксин перебивает заданный паддинг
 
     &--inner {
       background-color: #ffffff;
