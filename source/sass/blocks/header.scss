@@ -29,7 +29,8 @@
   height: 40px;
   background-color: #ffffff;
   border: none;
-  
+  cursor: pointer;
+
   &--active {
     &::before,
     &::after {
@@ -47,7 +48,6 @@
     }
   }
 
-
   &--inactive {
     &::after {
       content: "";
@@ -59,6 +59,16 @@
       background-color: #000000;
       box-shadow: 0 -8px 0 0 #000000, 0 8px 0 0 #000000;
     }
+  }
+}
+
+.header__nav {
+  &--open {
+    display: block;
+  }
+
+  &--closed {
+    display: none;
   }
 }
 
