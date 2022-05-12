@@ -31,6 +31,10 @@
   border: none;
   cursor: pointer;
 
+  &--nojs {
+    visibility: hidden;
+  }
+
   &--active {
     background-image: url("../../img/cross.svg");
     background-repeat: no-repeat;
@@ -53,12 +57,21 @@
 }
 
 .header__nav {
+  position: relative;
+
   &--open {
     display: block;
+    position: absolute;
+    width: 100%;
   }
 
   &--closed {
     display: none;
+  }
+
+  &--nojs {
+    display: block;
+    position: relative;
   }
 }
 

@@ -66,6 +66,7 @@
   }
 
   .promo__heading {
+    width: 500px;
     margin-bottom: 42px;
     padding-top: 42px;
     padding-left: 90px;
@@ -77,6 +78,7 @@
   }
 
   .promo__slogan {
+    z-index: 2;
     margin-bottom: 52px;
     padding-left: 90px;
     color: #000000;
@@ -131,5 +133,13 @@
     top: 141px;
     width: 552px;
     margin-top: 0;
+  }
+
+  .promo__slogan {
+    min-width: 300px;
+  }
+
+  .promo__button {
+    min-width: 245px;
   }
 }
