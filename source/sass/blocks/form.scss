@@ -20,6 +20,7 @@
   @include container;
   display: flex;
   flex-direction: column;
+  max-width: 1280px;
 
   &--contacts {
     margin-bottom: 13px;
@@ -67,6 +68,10 @@
   align-items: center;
   min-height: 46px;
   margin-bottom: 13px;
+}
+
+.form__label {
+  margin-right: 13px;
 }
 
 /*-------- радио/чекбоксы и состояния-----*/
@@ -208,6 +213,7 @@
   box-shadow: inset 0 0 0 1px var(--special_grey);
   box-sizing: border-box;
   border: none;
+  resize: vertical;
 }
 
 .form__submit-wrap {
@@ -276,14 +282,6 @@
     font-size: 20px;
     line-height: 30px;
   }
-
-  .form__control-mark {
-    padding-right: 40px;
-  }
-
-  // .form__control:hover > .form__control-mark::after {
-  //   border-color: #bababa;
-  // }
 
   .form__textarea {
     min-height: 174px;

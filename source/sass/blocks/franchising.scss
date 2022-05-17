@@ -43,6 +43,7 @@
 .franchising__map {
   background-image: url("../img/location-mobile.jpg");
   background-repeat: no-repeat;
+  background-size: cover;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/location-mobile@2x.jpg");
@@ -50,7 +51,6 @@
 }
 
 .franchising__map iframe {
-  display: block;
   z-index: -1;
   width: 100%;
 }
@@ -74,6 +74,7 @@
 
   .franchising__map {
     background-image: url("../img/location-tablet.jpg");
+    background-size: cover;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/location-tablet@2x.jpg");
@@ -113,7 +114,7 @@
 
   .franchising__map {
     background-image: url("../img/location-desktop.jpg");
-    background-size: 100%;
+    background-size: cover;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/location-desktop@2x.jpg");
