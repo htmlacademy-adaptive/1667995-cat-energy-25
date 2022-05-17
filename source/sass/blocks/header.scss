@@ -29,6 +29,11 @@
   height: 40px;
   background-color: #ffffff;
   border: none;
+  cursor: pointer;
+
+  &--nojs {
+    visibility: hidden;
+  }
 
   &--active {
     background-image: url("../../img/cross.svg");
@@ -51,6 +56,25 @@
   }
 }
 
+.header__nav {
+  position: relative;
+  z-index: 3;
+
+  &--open {
+    display: block;
+    position: absolute;
+    width: 100%;
+  }
+
+  &--closed {
+    display: none;
+  }
+
+  &--nojs {
+    display: block;
+    position: relative;
+  }
+}
 
 @media (min-width: $tablet-width) {
   .header {
@@ -84,6 +108,10 @@
   .header__menu {
     display: flex;
     flex-wrap: wrap;
+  }
+
+  .header__nav {
+    display: block;
   }
 }
 
