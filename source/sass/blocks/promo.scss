@@ -1,4 +1,5 @@
 .promo {
+  position: relative;
   width: 100%;
   margin-bottom: 20px;
   background-image: url("../../img/promo-background-mobile.jpg");
@@ -6,6 +7,7 @@
   background-repeat: no-repeat;
   background-size: contain;
   background-color: var(--basic_green-2);
+
 
   @media (min-resolution: 2dppx) {
     background-image: url("../../img/promo-background-mobile@2.jpg");
@@ -55,6 +57,7 @@
 @media (min-width: $tablet-width) {
   .promo {
     background-image: none;
+    background-color: transparent;
   }
 
   .promo__section-container {
@@ -74,7 +77,6 @@
     text-align: left;
     font-size: 60px;
     line-height: 60px;
-    // если установить максимальную ширину для заголовка, то под неё почему-то сужается весь контейнер
   }
 
   .promo__slogan {
@@ -109,11 +111,21 @@
     width: 100%;
     min-height: 696px;
     margin-bottom: 82px;
-    background-color: #ffffff;
     background-image: url("../../img/promo-background-desktop.jpg");
     background-position: right;
     background-repeat: no-repeat;
     background-size: contain;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 50%;
+      height: 696px;
+      background-color: var(--basic_green-2);
+      z-index: -2;
+    }
 
     @media (min-resolution: 2dppx) {
       background-image: url("../../img/promo-background-desktop@2x.jpg");

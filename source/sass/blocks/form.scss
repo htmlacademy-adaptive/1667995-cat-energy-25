@@ -31,6 +31,8 @@
 }
 
 .form__list-item {
+  display: flex;
+  align-items: center;
   margin-bottom: 27px;
 }
 
@@ -67,19 +69,38 @@
   margin-bottom: 13px;
 }
 
-.form__control:hover .form__control-mark--radio {
-  border: 1px solid #bababa;
-}
+/*-------- радио/чекбоксы и состояния-----*/
 
 .form__control {
+  display: flex;
+  align-items: center;
+
   &:active {
     opacity: 0.3;
   }
+
+  &:hover .form__control-mark {
+    border: 1px solid #bababa;
+  }
 }
 
-// чекбоксы и состояния
+.form__control-input:focus + .form__control-mark {
+  outline: #000000 solid 2px;
+}
+
+.form__control-input:disabled ~ * {
+  opacity: 0.3;
+  pointer-events: none;
+  // не знаю, что сделать, чтобы лейбл перестал быть кликабельным
+  cursor: not-allowed;
+}
 
 .form__control-mark {
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  width: 40px;
+  height: 40px;
   margin-right: 20px;
   padding-right: 25px;
   border: 1px solid var(--special_grey);
@@ -89,21 +110,28 @@
   }
 
   &--checkbox {
-    position: relative;
-    width: 40px;
-    height: 40px;
+    padding: 7px;
   }
 }
 
-.form__control-input:checked .form__control-mark--checkbox::before {
+.form__control-input:checked + .form__control-mark--radio::before {
   content: "";
   position: absolute;
-  transform: translate(4px, 2px);
-  top: 0%;
-  left: 0;
+  top: 25%;
+  right: 25%;
+  height: 18px;
   width: 18px;
-  height: 14px;
-  padding: 0;
+  background-color: var(--basic_green);
+  border-radius: 50%;
+}
+
+
+.form__control-input:checked + .form__control-mark--checkbox::before {
+  content: "";
+  position: absolute;
+  transform: translateY(2px);
+  width: 26px;
+  height: 26px;
   background-image: url("../img/checked.svg");
   background-size: contain;
   background-repeat: no-repeat;

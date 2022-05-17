@@ -58,6 +58,7 @@
 
 .header__nav {
   position: relative;
+  z-index: 3;
 
   &--open {
     display: block;
@@ -107,6 +108,10 @@
   .header__menu {
     display: flex;
     flex-wrap: wrap;
+  }
+
+  .header__nav {
+    display: block;
   }
 }
 
