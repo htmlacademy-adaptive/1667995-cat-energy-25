@@ -9,6 +9,12 @@
   text-decoration: none;
   border: none;
 
+  &:focus {
+    outline: #000000 soloid 2px;
+  }
+
+  // не работает почему-то
+
   &--primary {
     color: #ffffff;
     background-color: var(--basic_green);
