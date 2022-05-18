@@ -62,6 +62,8 @@
 
 @media (min-width: $desktop-width) {
   .offer {
+    position: relative;
+    width: 245px;
     background-image: url("../../img/gift-desktop.jpg");
     background-size: cover;
 
@@ -73,5 +75,14 @@
       left: 50%;
       transform: translate(-50%, 60px);
     }
+  }
+
+  .offer__text {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 40px;
+    padding: 0;
+    text-align: center;
   }
 }

@@ -1,14 +1,6 @@
 .menu-list {
   @include list-style-reset;
   background-color: #ffffff;
-
-  // &--open {
-  //   display: block;
-  // }
-
-  // &--closed {
-  //   display: none;
-  // }
 }
 
 .menu-list__item {
