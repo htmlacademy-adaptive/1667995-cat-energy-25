@@ -3,6 +3,8 @@
 }
 
 @media (min-width: $desktop-width) {
-  display: grid;
-  grid-template-columns: 320px 145px 1fr 244px;
+  .extra-products-list {
+    display: flex;
+    flex-direction: column;
+  }
 }

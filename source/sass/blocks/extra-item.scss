@@ -38,20 +38,23 @@
 
 @media (min-width: $desktop-width) {
   .extra-item {
-    display: grid;
-    grid-template-columns: 140px 1fr 1fr 245px;
+    display: flex;
   }
 
   .extra-item__wrapper {
+    display: flex;
     flex-grow: 1;
   }
 
   .extra-item__heading-link {
+    width: 300px;
     font-size: 20px;
     line-height: 20px;
   }
 
   .extra-item__info {
+    justify-content: space-between;
+    width: 288px;
     margin-right: 38px;
     font-size: 16px;
     line-height: 20px;
