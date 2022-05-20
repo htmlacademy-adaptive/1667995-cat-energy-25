@@ -16,8 +16,9 @@
       <div class="header__container">
         <a class="header__logo-pic" href="index.html">
           <picture>
-            <img src="img/logo-img.svg" width="34" height="37" alt="Логотип Кэт Энерджи.">
-
+            <source media="(min-width: 1280px)" src="img/logo-desktop.svg">
+            <source media="(min-width: 768px)" src="img/logo-tablet.svg">
+            <img src="img/logo-img-mobile.svg" width="34" height="37" alt="Логотип Кэт Энерджи.">
           </picture>
         </a>
         <a class="header__logo-text" href="index.html">
@@ -47,7 +48,13 @@
         <ul class="products-list">
           <li class="products-list__item product-card">
             <a class="product-card__link" href="#">
-              <img class="product-card__img" src="img/catalog/chicken-pro500.jpg" width="" height="" alt="">
+              <div class="product-card__picture-wrapper">
+                <picture>
+                    <source media="(min-width: 1440px)" srcset="img/catalog/catalog-desktop/catalog-1-desktop.png 1x, img/catalog/catalog-desktop/catalog-1-desktop@2x.png 2x">
+                    <source media="(min-width: 768px)" srcset="img/catalog/catalog-tablet/catalog-1-tablet.png 1x, img/catalog/catalog-tablet/catalog-1-tablet@2x.png 2x">
+                    <img class="product-card__img" src="img/catalog/catalog-mobile/catalog-1-mobile.png"  srcset="img/catalog/catalog-mobile/catalog-1-mobile@2x.png 2x" alt="">
+                </picture>
+              </div>
               <h3 class="product-card__name">Cat Energy PRO 500 г</h3>
               <div class="product-card__info">
                 <p class="product-card__info-string"><span>Масса</span><span>500 г</span></p>
@@ -59,7 +66,13 @@
           </li>
           <li class="products-list__item product-card">
             <a class="product-card__link" href="#">
-              <img class="product-card__img" src="img/catalog/chicken-pro1000.jpg" width="" height="" alt="">
+              <div class="product-card__picture-wrapper">
+                <picture>
+                  <source media="(min-width: 1440px)" srcset="img/catalog/catalog-desktop/catalog-2-desktop.png 1x, img/catalog/catalog-desktop/catalog-2-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/catalog/catalog-mobile/catalog-2-tablet.png 1x, img/catalog/catalog-tablet/catalog-2-tablet.png 2x">
+                  <img class="product-card__img" src="img/catalog/catalog-mobile/catalog-2-mobile.png" srcset="img/catalog/catalog-mobile/catalog-2-mobile@2x.png 2x" alt="">
+                </picture>
+              </div>
               <h3 class="product-card__name">Cat Energy PRO 1000 г</h3>
               <div class="product-card__info">
                 <p class="product-card__info-string"><span>Масса</span><span>1000 г</span></p>
@@ -71,7 +84,13 @@
           </li>
           <li class="products-list__item product-card">
             <a class="product-card__link" href="#">
-              <img class="product-card__img" src="img/catalog/fish-pro500.jpg" width="" height="" alt="">
+              <div class="product-card__picture-wrapper">
+                <picture>
+                  <source media="(min-width: 1440px)" srcset="img/catalog/catalog-desktop/catalog-3-desktop.png 1x, img/catalog/catalog-desktop/catalog-3-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/catalog/catalog-mobile/catalog-3-tablet.png 1x, img/catalog/catalog-tablet/catalog-3-tablet.png 2x">
+                  <img class="product-card__img" src="img/catalog/catalog-mobile/catalog-3-mobile.png" srcset="img/catalog/catalog-mobile/catalog-3-mobile@2x.png 2x" alt="">
+                </picture>
+              </div>
               <h3 class="product-card__name">Cat Energy PRO 500 г</h3>
               <div class="product-card__info">
                 <p class="product-card__info-string"><span>Масса</span><span>500 г</span></p>
@@ -83,7 +102,13 @@
           </li>
           <li class="products-list__item product-card">
             <a class="product-card__link" href="#">
-              <img class="product-card__img" src="img/catalog/fish-pro1000.png" width="" height="" alt="">
+              <div class="product-card__picture-wrapper">
+                <picture>
+                    <source media="(min-width: 1440px)" srcset="img/catalog/catalog-desktop/catalog-4-desktop.png 1x, img/catalog/catalog-desktop/catalog-4-desktop@2x.png 2x">
+                    <source media="(min-width: 768px)" srcset="img/catalog/catalog-mobile/catalog-4-tablet.png 1x, img/catalog/catalog-tablet/catalog-4-tablet.png 2x">
+                    <img class="product-card__img" src="img/catalog/catalog-mobile/catalog-4-mobile.png" srcset="img/catalog/catalog-mobile/catalog-4-mobile@2x.png 2x" alt="">
+                </picture>
+              </div>
               <h3 class="product-card__name">Cat Energy PRO 1000 г</h3>
               <div class="product-card__info">
                 <p class="product-card__info-string"><span>Масса</span><span>1000 г</span></p>
@@ -95,7 +120,13 @@
           </li>
           <li class="products-list__item product-card">
             <a class="product-card__link" href="#">
-              <img class="product-card__img" src="img/catalog/buckwheat-slim500.jpg" width="" height="" alt="">
+              <div class="product-card__picture-wrapper">
+                <picture>
+                  <source media="(min-width: 1440px)" srcset="img/catalog/catalog-desktop/catalog-5-desktop.png 1x, img/catalog/catalog-desktop/catalog-5-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/catalog/catalog-mobile/catalog-5-tablet.png 1x, img/catalog/catalog-tablet/catalog-5-tablet.png 2x">
+                  <img class="product-card__img" src="img/catalog/catalog-mobile/catalog-5-mobile.png" srcset="img/catalog/catalog-mobile/catalog-5-mobile@2x.png 2x" alt="">
+                </picture>
+              </div>
               <h3 class="product-card__name">Cat Energy SLIM 500 г</h3>
               <div class="product-card__info">
                 <p class="product-card__info-string"><span>Масса</span><span>500 г</span></p>
@@ -107,7 +138,13 @@
           </li>
           <li class="products-list__item product-card">
             <a class="product-card__link" href="#">
-              <img class="product-card__img" src="img/catalog/buckwheat-slim1000.jpg" width="" height="" alt="">
+              <div class="product-card__picture-wrapper">
+                <picture>
+                  <source media="(min-width: 1440px)" srcset="img/catalog/catalog-desktop/catalog-6-desktop.png 1x, img/catalog/catalog-desktop/catalog-6-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/catalog/catalog-mobile/catalog-6-tablet.png 1x, img/catalog/catalog-tablet/catalog-6-tablet.png 2x">
+                  <img class="product-card__img" src="img/catalog/catalog-mobile/catalog-6-mobile.png" srcset="img/catalog/catalog-mobile/catalog-6-mobile@2x.png 2x" alt="">
+                </picture>
+              </div>
               <h3 class="product-card__name">Cat Energy SLIM 1000 г</h3>
               <div class="product-card__info">
                 <p class="product-card__info-string"><span>Масса</span><span>1000 г</span></p>
@@ -119,7 +156,13 @@
           </li>
           <li class="products-list__item product-card">
             <a class="product-card__link" href="#">
-              <img class="product-card__img" src="img/catalog/rice-slim500.jpg" width="" height="" alt="">
+              <div class="product-card__picture-wrapper">
+                <picture>
+                  <source media="(min-width: 1440px)" srcset="img/catalog/catalog-desktop/catalog-7-desktop.png 1x, img/catalog/catalog-desktop/catalog-7-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/catalog/catalog-mobile/catalog-7-tablet.png 1x, img/catalog/catalog-tablet/catalog-7-tablet.png 2x">
+                  <img class="product-card__img" src="img/catalog/catalog-mobile/catalog-7-mobile.png" srcset="img/catalog/catalog-mobile/catalog-7-mobile@2x.png 2x" alt="">
+                </picture>
+              </div>
               <h3 class="product-card__name">Cat Energy SLIM 500 г</h3>
               <div class="product-card__info">
                 <p class="product-card__info-string"><span>Масса</span><span>500 г</span></p>

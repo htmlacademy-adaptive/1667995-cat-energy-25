@@ -176,7 +176,6 @@
 
     & .form__contacts-icon path {
       fill: var(--basic_green);
-      // не заполняет
     }
   }
 
@@ -185,17 +184,16 @@
 
     & .form__contacts-icon path {
       fill: var(--status_error);
-      // не заполняет
     }
   }
 }
 
 .form__contacts-icon {
-  width: 20px;
   position: absolute;
-  right: 15px;
   top: 50%;
   transform: translate(0, -50%);
+  width: 20px;
+  right: 15px;
 }
 
 
@@ -252,13 +250,15 @@
   }
 
   .form__fieldset-container {
+    padding: 0 46px;
+
     &--contacts {
       margin-bottom: 50px;
     }
   }
 
   .form__legend {
-    margin: 0 20px;
+    margin-left: 100px;
     margin-bottom: 76px;
     padding: 0 39px;
     font-size: 36px;
@@ -316,7 +316,6 @@
     &--contacts {
       display: flex;
       flex-direction: row;
-      padding: 0 30px;
 
       & .form__field-wrapper {
         width: 50%;
@@ -342,7 +341,6 @@
     &--extra {
       grid-template-columns: 1fr 1fr 1fr 1fr;
       margin-bottom: 47px;
-      padding: 0 30px;
     }
   }
 
@@ -364,8 +362,8 @@
   }
 
   .form__submit-wrap {
-    @include container;
     margin-bottom: 82px;
+    padding: 0;
   }
 
   .form__tip {
