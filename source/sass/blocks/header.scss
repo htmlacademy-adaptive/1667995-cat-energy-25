@@ -22,6 +22,14 @@
   display: inline-block;
 }
 
+.header__logo-img--tablet-visible {
+  display: none;
+}
+
+.header__logo-img--desktop-visible {
+  display: none;
+}
+
 .header__toggle {
   position: relative;
   padding: 0;
@@ -101,6 +109,14 @@
     margin-right: 12px;
   }
 
+  .header__logo-img--phone-visible {
+    display: none;
+  }
+
+  .header__logo-img--tablet-visible {
+    display: block;
+  }
+
   .header__toggle {
     display: none;
   }
@@ -121,5 +137,13 @@
     top: 0;
     z-index: 2;
     max-width: 1280px;
+  }
+
+  .header__logo-img--tablet-visible {
+    display: none;
+  }
+
+  .header__logo-img--desktop-visible {
+    display: block;
   }
 }
