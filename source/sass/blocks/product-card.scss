@@ -1,6 +1,7 @@
 .product-card {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  margin-bottom: -3px;
   border-bottom: 1px solid var(--basic-special_grey-2);
 }
 
@@ -30,12 +31,14 @@
 .product-card__info-string {
   display: flex;
   justify-content: space-between;
+  margin: 0;
   font-size: 12px;
   line-height: 16px;
 }
 
 .product-card__button {
   grid-column-end: span 2;
+  margin-top: 5px;
 }
 
 @media (min-width: $tablet-width) {

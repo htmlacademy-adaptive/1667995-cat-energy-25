@@ -4,6 +4,7 @@
 
 .guide-list__item {
   min-height: 60px;
+  margin-bottom: 20px;
   padding-left: 80px;
   background-position: left;
   background-size: 60px;
@@ -30,15 +31,14 @@
   .guide-list {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 130px;
-
+    gap: 51px 59px;
     counter-reset: li;
   }
 
   .guide-list__item {
-    max-width: 230px;
+    max-width: 260px;
     padding: 0;
-    padding-top: 110px;
+    padding-top: 95px;
     padding-bottom: 47px;
     font-size: 16px;
     line-height: 24px;
@@ -63,7 +63,7 @@
 
     &::after {
       position: absolute;
-      transform: translate(100%, -82%);
+      transform: translate(84%, -85%);
       z-index: -1;
       content: counter(li);
       counter-increment: li;

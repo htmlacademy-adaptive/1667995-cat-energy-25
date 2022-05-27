@@ -1,11 +1,11 @@
 .guide {
   @include container;
-  margin-bottom: 50px;
+  margin-bottom: 28px;
 }
 
 .guide__heading {
   margin: 0;
-  margin-bottom: 40px;
+  margin-bottom: 45px;
   font-family: "Oswald", sans-serif;
   font-size: 36px;
   font-weight: 400;
@@ -14,21 +14,20 @@
 }
 
 @media (min-width: $tablet-width) {
+  .guide {
+    margin-bottom: 520px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #e6e6e6;
+  }
+
   .guide__heading {
+    margin-bottom: 72px;
     font-size: 60px;
     line-height: 60px;
   }
 
   .guide__list {
     padding-bottom: 47px;
-  }
-}
-
-@media (min-width: $tablet-width) {
-  .guide {
-    margin-bottom: 541px;
-    padding-bottom: 50px;
-    border-bottom: 1px solid #e6e6e6;
   }
 }
 

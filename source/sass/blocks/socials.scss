@@ -1,9 +1,9 @@
 .socials {
   @include list-style-reset;
   display: flex;
-  width: fit-content;
-  margin: 0 auto;
-  padding: 20px 0;
+  justify-content: center;
+  width: 100%;
+  padding: 17px 0;
   border-top: 1px solid #d9d9d9;
   border-bottom: 1px solid #d9d9d9;
 }
@@ -14,7 +14,7 @@
 
 .socials__link {
   display: inline-block;
-  padding: 0 18px;
+  padding: 0 12px;
 
   &:hover svg path {
     fill: var(--basic_green);
