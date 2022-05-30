@@ -3,10 +3,17 @@
   justify-content: space-between;
   align-items: center;
   padding: 22px 0;
+  font-size: 16px;
+  line-height: 18px;
 
   &:active {
     opacity: 0.3;
   }
+}
+
+.credits__organization {
+  text-decoration: none;
+  color: var(--special_dark-grey);
 }
 
 .credits:hover .credits__organization,
@@ -18,10 +25,5 @@
 @media (min-width: $tablet-width) {
   .credits {
     padding: 0;
-  }
-
-  .credits__organization {
-    font-size: 16px;
-    line-height: 18px;
   }
 }
